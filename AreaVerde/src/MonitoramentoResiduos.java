@@ -51,4 +51,19 @@ public class MonitoramentoResiduos {
     public void setResponsavelColeta(String responsavelColeta) {
         this.responsavelColeta = responsavelColeta;
     }
+    // Metodo que calcula residuosPorMes
+    public double calcularResiduosPorMes() {
+        return quantidade * 30; // Quantidade diária * 30 dias
+    }
+
+    // Metodo para exibir informacoes
+    public void exibirInformacoes() {
+        System.out.println("Informações do Monitoramento de Resíduos:");
+        System.out.println("Tipo de Resíduo: " + tipoResiduo);
+        System.out.println("Quantidade Coletada: " + quantidade + " kg");
+        System.out.println("Quantidade Estimada por Mês: " + calcularResiduosPorMes() + " kg");
+        System.out.println("Data de Coleta: " + dataColeta);
+        System.out.println("Status da Coleta: " + statusColeta);
+        System.out.println("Responsável pela Coleta: " + responsavelColeta);
+    }
 }

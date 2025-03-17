@@ -50,4 +50,18 @@ public class AreaVerde {
     public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
     }
+    //Metodo para calcular tamanho em hectares
+    public double calcularTamanhoEmHectares() {
+        return tamanho / 10000; // cada hectar é = 10.000
+    }
+    // Metodo para exibir informacoes
+    public void exibirInformacoes() {
+        System.out.println("Informações da Área Verde:");
+        System.out.println("Nome: " + nome);
+        System.out.println("Localização: " + localizacao);
+        System.out.println("Tamanho: " + tamanho + " m²");
+        System.out.println("Tamanho em Hectares: " + calcularTamanhoEmHectares() + " ha");
+        System.out.println("Status de Conservação: " + statusConservacao);
+        System.out.println("Responsável: " + responsavel);
+    }
 }
